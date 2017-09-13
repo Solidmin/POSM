@@ -48,7 +48,10 @@
     <Compile Include="03 Entity\SystemManage\ModuleButtonEntity.cs" />
     <Compile Include="03 Entity\SystemManage\ModuleEntity.cs" />
     <Compile Include="03 Entity\SystemManage\RoleAuthorizeEntity.cs" />
+    <Compile Include="03 Entity\SystemManage\WorkflowProcessEntity.cs" />
+    <Compile Include="03 Entity\SystemManage\WorkflowExampleEntity.cs" />
     <Compile Include="03 Entity\SystemManage\WorkflowEntity.cs" />
+    <Compile Include="03 Entity\SystemManage\WorkflowNodeEntity.cs" />
     <Compile Include="03 Entity\SystemManage\UserLogOnEntity.cs" />
     <Compile Include="03 Entity\SystemManage\ItemsDetailEntity.cs" />
     <Compile Include="03 Entity\SystemSecurity\DbBackupEntity.cs" />

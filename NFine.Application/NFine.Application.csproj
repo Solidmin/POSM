@@ -52,6 +52,7 @@
     <Compile Include="SystemManage\AreaApp.cs" />
     <Compile Include="SystemManage\OrganizeApp.cs" />
     <Compile Include="SystemManage\RoleApp.cs" />
+    <Compile Include="SystemManage\WorkflowApp.cs" />
     <Compile Include="SystemManage\UserApp.cs" />
     <Compile Include="SystemManage\UserLogOnApp.cs" />
     <Compile Include="SystemManage\DutyApp.cs" />

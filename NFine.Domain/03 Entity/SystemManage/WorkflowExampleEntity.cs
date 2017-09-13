@@ -8,12 +8,28 @@ using System;
 
 namespace NFine.Domain.Entity.SystemManage
 {
-    public class WorkflowEntity : IEntity<WorkflowEntity>, ICreationAudited, IDeleteAudited, IModificationAudited
+    public class WorkflowExampleEntity : IEntity<WorkflowExampleEntity>, ICreationAudited, IDeleteAudited, IModificationAudited
     {
         public string F_Id { get; set; }
-        public string F_WorkflowName { get; set; }
-        public string F_WorkflowType { get; set; }
-        public int? F_SortCode { get; set; }
+        /// <summary>
+        /// 实例ID
+        /// </summary>
+        public string F_Eid { get; set; }
+
+        /// <summary>
+        /// 当前运行到节点ID
+        /// </summary>
+        public string F_Curnodeid { get; set; }
+        /// <summary>
+        /// 操作者
+        /// </summary>
+        public string F_Uid { get; set; }
+        /// <summary>
+        /// 操作时间
+        /// </summary>
+        public DateTime? F_Handtime { get; set; }
+        
+       
         public bool? F_DeleteMark { get; set; }
         public bool? F_EnabledMark { get; set; }
         public string F_Description { get; set; }

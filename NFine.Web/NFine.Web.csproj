@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -131,6 +132,7 @@
     <Compile Include="Areas\SystemManage\Controllers\OrganizeController.cs" />
     <Compile Include="Areas\SystemManage\Controllers\RoleAuthorizeController.cs" />
     <Compile Include="Areas\SystemManage\Controllers\RoleController.cs" />
+    <Compile Include="Areas\SystemManage\Controllers\WorkflowController.cs" />
     <Compile Include="Areas\SystemManage\Controllers\UserController.cs" />
     <Compile Include="Areas\SystemManage\Controllers\ItemsTypeController.cs" />
     <Compile Include="Areas\SystemManage\SystemManageAreaRegistration.cs" />
@@ -161,9 +163,15 @@
     <Content Include="Content\img\ajax-loader.gif" />
     <Content Include="Content\img\alipay.jpg" />
     <Content Include="Content\img\alipayimg.png" />
+    <Content Include="Content\img\bg-white-lock.png" />
+    <Content Include="Content\img\bg\1.jpg" />
+    <Content Include="Content\img\bg\2.jpg" />
+    <Content Include="Content\img\bg\3.jpg" />
+    <Content Include="Content\img\bg\4.jpg" />
     <Content Include="Content\img\button_pm_close.png" />
     <Content Include="Content\img\cy-reward-title-bg.jpg" />
     <Content Include="Content\img\loading.gif" />
+    <Content Include="Content\img\logo-big.png" />
     <Content Include="Content\img\radio1.jpg" />
     <Content Include="Content\img\radio2.jpg" />
     <Content Include="Content\img\samples\angelina-300.jpg" />
@@ -613,6 +621,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\SystemManage\Views\User\Info.cshtml" />
+    <Content Include="Areas\SystemManage\Views\Workflow\Details.cshtml" />
+    <Content Include="Areas\SystemManage\Views\Workflow\Form.cshtml" />
+    <Content Include="Areas\SystemManage\Views\Workflow\Index.cshtml" />
+    <Content Include="Areas\SystemManage\Views\Workflow\Info.cshtml" />
+    <Content Include="Areas\SystemManage\Views\Workflow\RevisePassword.cshtml" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
   </ItemGroup>
   <PropertyGroup>

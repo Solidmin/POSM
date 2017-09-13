@@ -8,11 +8,17 @@ using System;
 
 namespace NFine.Domain.Entity.SystemManage
 {
-    public class WorkflowEntity : IEntity<WorkflowEntity>, ICreationAudited, IDeleteAudited, IModificationAudited
+    public class WorkflowProcessEntity : IEntity<WorkflowProcessEntity>, ICreationAudited, IDeleteAudited, IModificationAudited
     {
         public string F_Id { get; set; }
-        public string F_WorkflowName { get; set; }
-        public string F_WorkflowType { get; set; }
+        public string F_Wid { get; set; }
+        public int? F_NodeType { get; set; }
+        public string F_Condition { get; set; }
+
+        public string F_Prevnode { get; set; }
+        public string F_Nextnode { get; set; }
+        public string F_HandlersType { get; set; }
+        public string F_Handlers { get; set; }
         public int? F_SortCode { get; set; }
         public bool? F_DeleteMark { get; set; }
         public bool? F_EnabledMark { get; set; }

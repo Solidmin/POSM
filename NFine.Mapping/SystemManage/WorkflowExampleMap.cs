@@ -4,14 +4,17 @@
  * Description: NFine快速开发平台
  * Website：http://www.nfine.cn
 *********************************************************************************/
-using NFine.Data;
 using NFine.Domain.Entity.SystemManage;
+using System.Data.Entity.ModelConfiguration;
 
-namespace NFine.Domain.IRepository.SystemManage
+namespace NFine.Mapping.SystemManage
 {
-    public interface IWorkflowRepository : IRepositoryBase<WorkflowEntity>
+    public class WorkflowExampleMap : EntityTypeConfiguration<WorkflowExampleEntity>
     {
-        void DeleteForm(string keyValue);
-        void SubmitForm(WorkflowEntity workflowrEntity,  string keyValue);
+        public WorkflowExampleMap()
+        {
+            this.ToTable("Sys_WorkflowExample");
+            this.HasKey(t => t.F_Id);
+        }
     }
 }
