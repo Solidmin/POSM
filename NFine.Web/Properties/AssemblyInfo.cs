@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过下列特性集
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("NFine快速开发平台")]
-[assembly: AssemblyDescription("NFine快速开发平台")]
+[assembly: AssemblyTitle("POSM")]
+[assembly: AssemblyDescription("POSM")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NFine团队")]
-[assembly: AssemblyProduct("NFine快速开发平台（www.nfine.cn）")]
+[assembly: AssemblyProduct("POSM（www.nfine.cn）")]
 [assembly: AssemblyCopyright("Copyright © NFine 2016")]
 [assembly: AssemblyTrademark("NFine.Framework")]
 [assembly: AssemblyCulture("")]

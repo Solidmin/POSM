@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 <html style="overflow: hidden;">
 <head>
-    <title>NFine快速开发平台</title>
+    <title>MHD | POSM</title>
+    <link rel="shortcut icon " type="images/x-icon" href="~/Content/img/M.png">
     <link href="~/Content/css/framework-font.css" rel="stylesheet" />
     <script src="~/Content/js/jquery/jquery-2.1.1.min.js"></script>
     <script src="~/Content/js/bootstrap/bootstrap.js"></script>
@@ -19,19 +20,24 @@
     <div id="theme-wrapper">
         <header class="navbar" id="header-navbar">
             <div class="container" style="padding-right: 0px;">
-                <a href="#" id="logo" class="navbar-brand">开发平台</a>
+               <!-- <a href="#" id="logo" class="navbar-brand">开发平台</a>-->
+                <div class="navbar-brand">
+                     <img src="~/Content/img/logo-small.png" alt="" />
+                </div>
                 <div class="clearfix">
                     <div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">
-                        <ul class="nav navbar-nav pull-left">
-                            <li>
-                                <a class="btn" id="make-small-nav"><i class="fa fa-bars"></i></a>
-                            </li>
-                        </ul>
+                        
+                        <div id="sidebar-nav" class="collapse navbar-collapse  navbar-ex1-collapse">
+                            <ul class="nav navbar-nav"></ul>
+                        </div>
                     </div>
-                
-      
+
                     <div class="nav-no-collapse pull-right" id="header-nav">
+                        
                         <ul class="nav navbar-nav pull-right">
+                            
+                            <!--
+                                
                             <li class="mobile-search">
                                 <a class="btn">
                                     <i class="fa fa-search"></i>
@@ -51,7 +57,7 @@
                                     <span class="count">5</span>
                                 </a>
                             </li>
-                            <!--<li class="dropdown hidden-xs">
+                                <li class="dropdown hidden-xs">
                                 <a class="btn dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-bell"></i>
                                     <span class="count">8</span>
@@ -71,7 +77,7 @@
                                     <span class="hidden-xs">@NFine.Code.OperatorProvider.Provider.GetCurrent().UserCode</span>
                                 </a>
                                 <ul class="dropdown-menu pull-right">
-                                    <li><a class="menuItem" data-id="userInfo" href="/SystemManage/User/Info"><i class="fa fa-user"></i>个人信息</a></li>
+                                    <li><a class="menuItem" data-id="userInfo" href="/SystemManage/Workflow/Info"><i class="fa fa-user"></i>个人信息</a></li>
                                     <!--<li><a href="javascript:void();"><i class="fa fa-inbox"></i>我的信箱</a></li> -->
                                     <li><a href="javascript:void();" onclick="layer.msg('浏览器缓存清除成功');"><i class="fa fa-trash-o"></i>清空缓存</a></li>
                                     <li><a href="javascript:void();"><i class="fa fa-paint-brush"></i>皮肤设置</a></li>
@@ -86,74 +92,27 @@
         </header>
         <div id="page-wrapper" class="container">
             <div class="row">
-                <div id="nav-col">
-                    <section id="col-left" class="col-left-nano">
-                        <div id="col-left-inner" class="col-left-nano-content">
-                           <!--
-                               
-                            <div id="user-left-box" class="clearfix hidden-sm hidden-xs dropdown profile2-dropdown">
-                                <img alt="" src="~/Content/img/samples/scarlet-159.png" />
-                                <div class="user-box">
-                                    <span class="name">
-                                        @NFine.Code.OperatorProvider.Provider.GetCurrent().UserCode;@NFine.Code.OperatorProvider.Provider.GetCurrent().UserName
-                                    </span>
-                                    <span class="status">
-                                        <i class="fa fa-circle"></i>在线
-                                    </span>
-                                </div>
-                            </div>
-                                --> 
-                           
-                            <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
-                                <ul class="nav nav-pills nav-stacked">
-
-                                   <!-- <li class="nav-header hidden-sm hidden-xs">
-                                        常用菜单
-                                        <i class="fa fa-gear" style="color: #868b98; font-size: 12px; margin-top: -6px; position: absolute; right: 23px; top: 50%; cursor: pointer;"></i>
-                                    </li>
-                                    <li class="common">
-                                        <a href="#">
-                                            <i class="fa fa-star-o"></i>
-                                            <span>联系人</span>
-                                        </a>
-                                    </li>
-                                    <li class="common">
-                                        <a href="#">
-                                            <i class="fa fa-star-o"></i>
-                                            <span>合同</span>
-                                        </a>
-                                    </li>
-                                    <li class="common">
-                                        <a href="maps.html">
-                                            <i class="fa fa-star-o"></i>
-                                            <span>产品</span>
-                                        </a>
-                                    </li>
-                                    <li class="common">
-                                        <a href="#">
-                                            <i class="fa fa-star-o"></i>
-                                            <span>客户</span>
-                                        </a>
-                                    </li>-->
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+                
+                          
+                                   
+                            
                 <div id="content-wrapper">
                     <div class="content-tabs">
-                        <button class="roll-nav roll-left tabLeft">
+                        <!--
+                           <button class="roll-nav roll-left tabLeft">
                             <i class="fa fa-backward"></i>
-                        </button>
+                        </button> 
+                        -->
                         <nav class="page-tabs menuTabs">
                             <div class="page-tabs-content" style="margin-left: 0px;">
                                 <a href="javascript:;" class="menuTab active" data-id="/Home/Default">首页</a>
                                 <!--<a href="javascript:;" class="menuTab" data-id="/Home/About" style="padding-right: 15px;">平台介绍</a> -->
                             </div>
                         </nav>
-                        <button class="roll-nav roll-right tabRight">
+                         <!--<button class="roll-nav roll-right tabRight">
                             <i class="fa fa-forward" style="margin-left: 3px;"></i>
-                        </button>
+                        </button>-->
+                        
                         <div class="btn-group roll-nav roll-right">
                             <button class="dropdown tabClose" data-toggle="dropdown">
                                 页签操作<i class="fa fa-caret-down" style="padding-left: 3px;"></i>
@@ -167,7 +126,7 @@
                         </div>
                         <button class="roll-nav roll-right fullscreen"><i class="fa fa-arrows-alt"></i></button>
                     </div>
-                    <div class="content-iframe" style="background-color: #f9f9f9; overflow: hidden;">
+                    <div class="content-iframe" style="background-color: #f9f9f9; overflow: hidden;width:100%">
                         <div class="mainContent" id="content-main" style="margin: 10px; margin-bottom: 0px; padding: 0;">
                             <iframe class="NFine_iframe" width="100%" height="100%" src="/Home/Default" frameborder="0" data-id="/Home/Default"></iframe>
                           <!--<iframe class="NFine_iframe" width="100%" height="100%" src="/Home/About" frameborder="0" data-id="/Home/About"></iframe> -->  

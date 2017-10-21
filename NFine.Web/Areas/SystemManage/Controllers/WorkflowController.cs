@@ -1,8 +1,8 @@
 ﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
+ * Copyright © 2017 Mudita.Framework 版权所有
+ * Author: Mudita
+ * Description: POSM
+ * Website：
 *********************************************************************************/
 using NFine.Application.SystemManage;
 using NFine.Code;
@@ -25,7 +25,7 @@ namespace NFine.Web.Areas.SystemManage.Controllers
         {
             var data = new
             {
-                rows = workflowApp.GetList(pagination, keyword),
+               // rows = workflowApp.GetList(pagination, keyword),
                 total = pagination.total,
                 page = pagination.page,
                 records = pagination.records

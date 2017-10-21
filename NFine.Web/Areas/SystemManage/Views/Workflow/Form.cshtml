@@ -8,7 +8,7 @@
         initControl();
         if (!!keyValue) {
             $.ajax({
-                url: "/SystemManage/Workflow/GetFormJson",
+                url: "/SystemManage/User/GetFormJson",
                 data: { keyValue: keyValue },
                 dataType: "json",
                 async: false,
@@ -45,7 +45,7 @@
             return false;
         }
         $.submitForm({
-            url: "/SystemManage/Workflow/SubmitForm?keyValue=" + keyValue,
+            url: "/SystemManage/User/SubmitForm?keyValue=" + keyValue,
             param: $("#form1").formSerialize(),
             success: function () {
                 $.currentWindow().$("#gridList").trigger("reloadGrid");

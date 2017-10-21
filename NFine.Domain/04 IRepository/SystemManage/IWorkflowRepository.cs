@@ -1,8 +1,8 @@
 ﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
+ * Copyright © 2017 Mudita.Framework 版权所有
+ * Author: Mudita
+ * Description: POSM
+ * Website：
 *********************************************************************************/
 using NFine.Data;
 using NFine.Domain.Entity.SystemManage;
@@ -11,7 +11,5 @@ namespace NFine.Domain.IRepository.SystemManage
 {
     public interface IWorkflowRepository : IRepositoryBase<WorkflowEntity>
     {
-        void DeleteForm(string keyValue);
-        void SubmitForm(WorkflowEntity workflowrEntity,  string keyValue);
     }
 }

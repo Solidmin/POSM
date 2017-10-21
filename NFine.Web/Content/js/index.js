@@ -2,17 +2,18 @@ var storage, fail, uid; try { uid = new Date; (storage = window.localStorage).se
 if (storage) {
 
     var usedSkin = localStorage.getItem('config-skin');
+   
 
     if (usedSkin != '' && usedSkin != null) {
         document.body.className = usedSkin;
     }
     else {
-        document.body.className = 'theme-blue-gradient';
-        localStorage.setItem('config-skin', "theme-blue-gradient");
+        document.body.className = 'theme-redblue';
+        localStorage.setItem('config-skin', "theme-redblue");
     }
 }
 else {
-    document.body.className = 'theme-blue';
+    document.body.className = 'theme-redblue';
 }
 $(function () {
     if (storage) {
@@ -73,23 +74,23 @@ $(function ($) {
         e.preventDefault();
         var $item = $(this).parent();
         if (!$item.hasClass('open')) {
-            $item.parent().find('.open .submenu').slideUp('fast');
+            $item.parent().find('.open .dropdown-menu').slideUp('fast');
             $item.parent().find('.open').toggleClass('open');
         }
         $item.toggleClass('open');
         if ($item.hasClass('open')) {
-            $item.children('.submenu').slideDown('fast', function () {
+            $item.children('.dropdown-menu').slideDown('fast', function () {
                 var _height1 = $(window).height() - 92 - $item.position().top;
-                var _height2 = $item.find('ul.submenu').height() + 10;
+                var _height2 = $item.find('ul.dropdown-menu').height() + 10;
                 var _height3 = _height2 > _height1 ? _height1 : _height2;
-                $item.find('ul.submenu').css({
+                $item.find('ul.dropdown-menu').css({
                     overflow: "auto",
                     height: _height3
                 })
             });
         }
         else {
-            $item.children('.submenu').slideUp('fast');
+            $item.children('.dropdown-menu').slideUp('fast');
         }
     });
     GetLoadNav();
@@ -102,21 +103,21 @@ $(function ($) {
                 if ((topPosition + 4 * $(this).outerHeight()) >= $(window).height()) {
                     topPosition -= 6 * $(this).outerHeight();
                 }
-                $('#nav-col-submenu').html($item.children('.submenu').clone());
-                $('#nav-col-submenu > .submenu').css({ 'top': topPosition });
+                $('#nav-col-submenu').html($item.children('.dropdown-menu').clone());
+                $('#nav-col-submenu > .dropdown-menu').css({ 'top': topPosition });
             }
 
             $item.addClass('open');
-            $item.children('.submenu').slideDown('fast');
+            $item.children('.dropdown-menu').slideDown('fast');
         }
     });
-    $('body').on('mouseleave', '#page-wrapper.nav-small #sidebar-nav > .nav-pills > li', function (e) {
+    $('body').on('mouseleave', '#page-wrapper.nav-small #sidebar-nav > .navbar-nav > li', function (e) {
         if ($(document).width() >= 992) {
             var $item = $(this);
             if ($item.hasClass('open')) {
-                $item.find('.open .submenu').slideUp('fast');
+                $item.find('.open .dropdown-menu').slideUp('fast');
                 $item.find('.open').removeClass('open');
-                $item.children('.submenu').slideUp('fast');
+                $item.children('.dropdown-menu').slideUp('fast');
             }
             $item.removeClass('open');
         }
@@ -159,10 +160,16 @@ function GetLoadNav() {
         var row = data[i];
         if (row.F_ParentId == "0") {
             _html += '<li>';
-            _html += '<a data-id="' + row.F_Id + '" href="#" class="dropdown-toggle"><i class="' + row.F_Icon + '"></i><span>' + row.F_FullName + '</span><i class="fa fa-angle-right drop-icon"></i></a>';
+            _html += '<a data-id="' + row.F_Id + '"';
+            if (row.F_UrlAddress !== null && row.F_UrlAddress !== undefined) {
+                _html += ' href="' + row.F_UrlAddress + '" data-index="' + row.F_SortCode + '"  class="dropdown-toggle menuItem">';
+            } else {
+                _html += ' href="#"  class="dropdown-toggle">';
+            }
+            _html += '<i class="' + row.F_Icon + '"></i><span>' + row.F_FullName + '</span></a>';
             var childNodes = row.ChildNodes;
             if (childNodes.length > 0) {
-                _html += '<ul class="submenu">';
+                _html += '<ul class="dropdown-menu">';
                 $.each(childNodes, function (i) {
                     var subrow = childNodes[i];
                     _html += '<li>';

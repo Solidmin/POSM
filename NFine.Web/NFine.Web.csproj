@@ -115,6 +115,8 @@
     <Compile Include="App_Start\01 Handler\HandlerErrorAttribute.cs" />
     <Compile Include="App_Start\01 Handler\HandlerLoginAttribute.cs" />
     <Compile Include="App_Start\01 Handler\ControllerBase.cs" />
+    <Compile Include="Areas\BussinessManage\BussinessManageAreaRegistration.cs" />
+    <Compile Include="Areas\BussinessManage\Controllers\ApplicationController.cs" />
     <Compile Include="Areas\ExampleManage\Controllers\BarCodeController.cs" />
     <Compile Include="Areas\ExampleManage\Controllers\PrintController.cs" />
     <Compile Include="Areas\ExampleManage\Controllers\SendMailController.cs" />
@@ -172,6 +174,8 @@
     <Content Include="Content\img\cy-reward-title-bg.jpg" />
     <Content Include="Content\img\loading.gif" />
     <Content Include="Content\img\logo-big.png" />
+    <Content Include="Content\img\logo-small.png" />
+    <Content Include="Content\img\M.png" />
     <Content Include="Content\img\radio1.jpg" />
     <Content Include="Content\img\radio2.jpg" />
     <Content Include="Content\img\samples\angelina-300.jpg" />
@@ -626,6 +630,8 @@
     <Content Include="Areas\SystemManage\Views\Workflow\Index.cshtml" />
     <Content Include="Areas\SystemManage\Views\Workflow\Info.cshtml" />
     <Content Include="Areas\SystemManage\Views\Workflow\RevisePassword.cshtml" />
+    <Content Include="Areas\BussinessManage\Views\Application\Index.cshtml" />
+    <Content Include="Areas\BussinessManage\Views\Web.config" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
   </ItemGroup>
   <PropertyGroup>
